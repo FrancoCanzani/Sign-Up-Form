@@ -1,0 +1,132 @@
+/* Browser reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&display=swap');
+
+/* Main containers */
+
+@font-face {
+    font-family: NasaFont;
+    src: url(/font/nasalization/nasalization-rg.otf);
+}
+
+
+
+div.container {
+    display: flex;
+}
+
+/* Left section */
+
+div.left {
+    position: relative;
+    width: 40%;
+    height: 100vh;
+    background-image: url(/images/mars.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.cover{
+    height: 100%;
+    width: 100%;
+    display: block;
+    z-index: 999;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+
+h1 {
+    font-family: 'NasaFont', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.logo {
+    object-fit:scale-down;
+    height: 100%;
+}
+
+/* Right section */
+
+div.right {
+    width: 60%;
+    height: 100vh;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+div.top {
+    height: 25%;
+    word-wrap: break-word;
+}
+
+p {
+    padding-top: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+}
+
+div.middle {
+    height: 50%;
+    background: darkblue;
+}
+
+div.bottom {
+    height: 25%;
+    background: yellow;
+}
