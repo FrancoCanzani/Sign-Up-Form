@@ -56,8 +56,6 @@ table {
     src: url(/font/nasalization/nasalization-rg.otf);
 }
 
-
-
 div.container {
     display: flex;
 }
@@ -72,6 +70,7 @@ div.left {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 3px;
 }
 
 div.cover{
@@ -106,27 +105,193 @@ div.right {
     height: 100vh;
     font-family: 'Assistant', sans-serif;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 14px;
+}
+
+div.top, .middle, .bottom {
+    border-radius: 3px;
+
 }
 
 div.top {
     height: 25%;
+    display: flex;
+    align-items: center;
     word-wrap: break-word;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #eeeeee,
+                -15px -15px 30px #ffffff;
+}
+
+span {
+    font-family: 'NasaFont', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 p {
-    padding-top: 35px;
+    padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 5px;
 }
 
 div.middle {
-    height: 50%;
-    background: darkblue;
+    height: 45%;
 }
 
 div.bottom {
-    height: 25%;
-    background: yellow;
+    height: 30%;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #eeeeee,
+                -15px -15px 30px #ffffff;
 }
+
+/* Middle form */
+
+form {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+div.personal-data, .contact, .password {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+}
+
+div.name, .last-name, .date, .email, .phone, .pass, .second-pass, .gender {
+    padding: 10px;
+}
+
+
+input, select {
+    width: 150px;
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+
+  
+  label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background:  #0B3D91;
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  
+  button svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  button:hover svg {
+    transform: translateX(5px) rotate(90deg);
+  }
+  
+  button:hover span {
+    transform: translateX(7px);
+  }
+
+/* Bottom section */
+
+/* Hide the default checkbox */
+
+span.risks {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+    color: red;
+}
+
+.bottom {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.terms .checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+   }
+   
+   .terms {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    user-select: none;
+    padding-bottom: 20px;
+   }
+   
+   /* Create a custom checkbox */
+   .checkmark {
+    position: relative;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background: #606062;
+    border-radius: 7px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.30), 0px 1px 1px rgba(0,5);
+   }
+   
+   /* When the checkbox is checked, add a blue background */
+   .container .checkbox:checked ~ .checkmark {
+    background-image: linear-gradient(#0B3D91,#1D52C1)
+   }
+   
+   /* Create the checkmark/indicator (hidden when not checked) */
+   .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+   }
+   
+   /* Show the checkmark when checked */
+   .terms .checkbox:checked ~ .checkmark:after {
+    display: block;
+   }
+   
+   /* Style the checkmark/indicator */
+   .terms .checkmark:after {
+    left: 0.45em;
+    top: 0.20em;
+    width: 0.24em;
+    height: 0.6em;
+    border: solid white;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+   }

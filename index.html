@@ -22,12 +22,80 @@
         <!-- Right section -->
         <div class="right">
             <div class="top">
-                <p>NASA is under presidential orders to land humans on Mars by 2033 although later years like 2035 or even late 2030s seem as a more realistic approach. The agency will use what we learn on the Moon to prepare for humanity's next giant leap – sending astronauts to Mars. <br><br>
+                <p><span>Mars Colony</span> is part of the Artemis I <span>NASA</span> program in a series of increasingly complex missions that will enable human exploration to the Moon and Mars. <br><br> <span>NASA</span> is under presidential orders to land humans on Mars by 2033 although later years like 2035 or even late 2030s seem as a more realistic approach. The agency will use what we learn on the Moon to prepare for humanity's next giant leap – sending astronauts to Mars. <br><br>
 
                 Sign up to be one of the first humans to touch martian soil!</p>
             </div>
-            <div class="middle"></div>
-            <div class="bottom"></div>
+            <div class="middle">
+                <form action="/main.js" method="get" autocomplete="on">
+                    <h3>Let's do this!</h3>
+                    <div class="personal-data">
+                        <div class="name">
+                            <label for="name">Name</label><br>
+                            <input type="text" name="name" id="name" required>    
+                        </div>
+                        <div class="lastName">
+                            <label for="last-name">Last Name</label><br>
+                            <input type="text" name="last-name" id="last-name" required>    
+                        </div>
+                        <div class="date">
+                            <label for="myDate">Date of Birth</label><br>
+                            <input
+                            type="date"
+                            name="myDate"
+                            min="1950-01-01"
+                            max="2004-12-15"
+                            id="myDate" required/>
+                        </div>
+                        <div class="gender">
+                            <label for="Gender">Gender</label><br>
+                            <select id="cars" name="cars">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="email">
+                            <label for="email">Email</label><br>
+                            <input type="text" name="email" id="email" required>    
+                        </div>
+                        <div class="phone">
+                            <label for="phonenumber">Phone Number</label><br>
+                            <input type="tel" id="tel" name="tel" required/>
+                        </div>
+                        <div class="password">
+                            <div class="pass">
+                                <label for="userPassword">Password</label><br>
+                                <input id="userPassword" type="password" required/>
+                            </div>
+                            <div class="second-pass">
+                                <label for="userPassword">Repeat Password</label><br>
+                                <input id="userPassword" type="password" required/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="bottom">
+                <div class="terms">
+                    <label class="check">
+                        <input class="checkbox" type="checkbox" checked="checked" required>
+                        <div class="checkmark"></div>
+                    </label>
+                    <p>I have read and agree on the Terms of Service. <span class="risks">Difficulties and hazards include radiation exposure during a trip to Mars and on its surface, toxic soil, low gravity, the isolation that accompanies Mars' distance from Earth, a lack of water, and cold temperatures.</span></p>
+                </div>
+
+                <div class="button">
+                    <button>
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"></path></svg>
+                        <span>Launch</span>
+                      </button>
+                </div>
+            </div>
         </div>
     </div>
 
