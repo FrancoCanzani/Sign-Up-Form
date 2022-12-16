@@ -57,6 +57,8 @@ table {
     src: url(/font/nasalization/nasalization-rg.otf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
+
 div.container {
     display: flex;
 }
@@ -98,7 +100,6 @@ h1 {
     height: 100%;
 }
 
-
 /* Right section */
 
 div.right {
@@ -110,25 +111,46 @@ div.right {
 }
 
 div.top {
-    height: 30%;
+    height: 40%;
     font-size: 25px;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 div.bar {
+  position: absolute;
   width: 100%;
   height: 15px;
-  position: fixed;
   top: 0;
+  right: 0;
   background-image: linear-gradient(#0B3D91,#1D52C1);
 }
 
+div.date-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT Sans', sans-serif;
+  padding: 10px;
+  height: 15%;
+  width: auto;
+  color: white;
+  box-shadow: 0.3em 0.3em 0.7em #00000015;
+  transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: rgb(250, 250, 250) 0.2em solid;
+  border-radius: 15px;
+  background-image: url(/images/space.jpg);
+}
+
+div.date-counter:hover{
+  border: #0B3D91 0.2em solid;
+}
+
 div.text {
-  margin-top: 30px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 5px 20px 20px;
 }
 
 span.top-text {
@@ -138,12 +160,15 @@ span.top-text {
   text-transform: uppercase;
 }
 
+
 /* Middle form */
 
 div.middle {
-    height: 50%;
+    height: 40%;
+    margin-left: 20px;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -155,10 +180,9 @@ div.personal-data, .contact, .password {
 }
 
 h3 {
-  font-size: 18px;
-  margin-left: 15px;
+  font-size: 20px;
   margin-bottom: 10px;
-  text-decoration:solid;
+  text-decoration: underline;
 }
 
 div.name, .last-name, .date, .email, .phone, .pass, .second-pass, .gender {
@@ -193,11 +217,10 @@ div.bottom {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
   padding-left: 15px;
   padding-right: 15px;
   height: 20%;
-  background: #ececec;
+  background: #f6f6f6;
   box-shadow: 15px 15px 30px #eeeeee,
               -15px -15px 30px #ffffff;
 }
@@ -208,13 +231,13 @@ button {
     font-family: 'NasaFont', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 15px;
-    padding: 0.8em 1.3em 0.8em 0.9em;
+    font-size: 10px;
+    padding: 0.8em 1.8em 0.8em 1.8em;
     color: white;
-    background:  #0B3D91;
+    background: #0B3D91;
     border: none;
     letter-spacing: 0.05em;
-    border-radius: 16px;
+    border-radius: 8px;
     cursor: pointer;
   }
   
@@ -237,6 +260,9 @@ button {
   }
 
 /* Hide the default checkbox */
+p.agreement{
+  font-size: 12px;
+}
 
 span.risks {
   font-family: inherit;
@@ -257,7 +283,7 @@ span.risks {
 .terms {
 display: flex;
 margin-bottom: 20px;
-margin-top: 25px;
+margin-top: 20px;
 }
 
 .check {
