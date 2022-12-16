@@ -47,9 +47,10 @@ table {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&display=swap');
 
 /* Main containers */
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&display=swap');
 
 @font-face {
     font-family: NasaFont;
@@ -70,7 +71,6 @@ div.left {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 3px;
 }
 
 div.cover{
@@ -98,6 +98,7 @@ h1 {
     height: 100%;
 }
 
+
 /* Right section */
 
 div.right {
@@ -108,51 +109,42 @@ div.right {
     font-size: 14px;
 }
 
-div.top, .middle, .bottom {
-    border-radius: 3px;
-
-}
-
 div.top {
-    height: 25%;
-    display: flex;
-    align-items: center;
-    word-wrap: break-word;
-    background: #e0e0e0;
-    box-shadow: 15px 15px 30px #eeeeee,
-                -15px -15px 30px #ffffff;
-}
-
-span {
-    font-family: 'NasaFont', sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-p {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-div.middle {
-    height: 45%;
-}
-
-div.bottom {
     height: 30%;
-    background: #e0e0e0;
-    box-shadow: 15px 15px 30px #eeeeee,
-                -15px -15px 30px #ffffff;
+    font-size: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.bar {
+  width: 100%;
+  height: 15px;
+  position: fixed;
+  top: 0;
+  background-image: linear-gradient(#0B3D91,#1D52C1);
+}
+
+div.text {
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+span.top-text {
+  font-family: 'NasaFont', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* Middle form */
 
-form {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+div.middle {
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 div.personal-data, .contact, .password {
@@ -160,6 +152,13 @@ div.personal-data, .contact, .password {
     justify-content: flex-start;
     align-items: center;
     padding: 5px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  text-decoration:solid;
 }
 
 div.name, .last-name, .date, .email, .phone, .pass, .second-pass, .gender {
@@ -187,12 +186,29 @@ input, select {
     transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
   }
   
+/* Bottom section */
+
+div.bottom {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 20%;
+  background: #ececec;
+  box-shadow: 15px 15px 30px #eeeeee,
+              -15px -15px 30px #ffffff;
+}
+
 button {
     display: flex;
     align-items: center;
-    font-family: inherit;
+    font-family: 'NasaFont', sans-serif;
+    text-transform: uppercase;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 15px;
     padding: 0.8em 1.3em 0.8em 0.9em;
     color: white;
     background:  #0B3D91;
@@ -220,78 +236,82 @@ button {
     transform: translateX(7px);
   }
 
-/* Bottom section */
-
 /* Hide the default checkbox */
 
 span.risks {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    text-transform: inherit;
-    color: red;
-}
-
-.bottom {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  color: red;
 }
 
 .terms .checkbox {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-   }
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
    
-   .terms {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    user-select: none;
-    padding-bottom: 20px;
-   }
-   
-   /* Create a custom checkbox */
-   .checkmark {
-    position: relative;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    height: 1.3em;
-    width: 1.3em;
-    background: #606062;
-    border-radius: 7px;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.30), 0px 1px 1px rgba(0,5);
-   }
-   
-   /* When the checkbox is checked, add a blue background */
-   .container .checkbox:checked ~ .checkmark {
-    background-image: linear-gradient(#0B3D91,#1D52C1)
-   }
-   
-   /* Create the checkmark/indicator (hidden when not checked) */
-   .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-   }
-   
-   /* Show the checkmark when checked */
-   .terms .checkbox:checked ~ .checkmark:after {
-    display: block;
-   }
-   
-   /* Style the checkmark/indicator */
-   .terms .checkmark:after {
-    left: 0.45em;
-    top: 0.20em;
-    width: 0.24em;
-    height: 0.6em;
-    border: solid white;
-    border-width: 0 0.15em 0.15em 0;
-    transform: rotate(45deg);
-   }
+.terms {
+display: flex;
+margin-bottom: 20px;
+margin-top: 25px;
+}
+
+.check {
+margin-right: 7px;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+position: relative;
+cursor: pointer;
+top: 0;
+left: 0;
+height: 1.3em;
+width: 1.3em;
+background: #000000;
+border-radius: 7px;
+box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.30), 0px 1px 1px rgba(0,5);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container .checkbox:checked ~ .checkmark {
+background-image: linear-gradient(#0B3D91,#1D52C1)
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+/* Show the checkmark when checked */
+.terms .checkbox:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the checkmark/indicator */
+.terms .checkmark:after {
+left: 0.45em;
+top: 0.20em;
+width: 0.24em;
+height: 0.6em;
+border: solid white;
+border-width: 0 0.15em 0.15em 0;
+transform: rotate(45deg);
+}
+
+/* Footer */
+
+img.gh-pic {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 20px;
+  max-height: 20px;
+  margin: 8px;
+}
