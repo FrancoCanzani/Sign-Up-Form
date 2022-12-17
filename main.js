@@ -27,24 +27,36 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-// Password matching 
-
+//
 
 const submitBtn = document.querySelector("button");
 const form = document.getElementById('form');
 const log = document.getElementById('log');
+
+let reload = function() {
+  window.location.reload();
+}
+
+// Password matching 
 
 function passwordConfirmation() {
   var password = document.getElementById("password").value;
   var confirmPassword = document.getElementById("secondPassword").value;
  
   if (password != confirmPassword) {
-      alert("Passwords don't match!");
-}
+    log.textContent = `❌ Passwords don't match!`;
+} else if(password == "") {
+    log.textContent = `⚠️ Looks like you are missing something...`;
+} else if((password == confirmPassword) && (password.length >= 8)) {
+    log.textContent = `🚀 Submitting...!`;
+    setTimeout(function() {reload()}, 1000) 
+    }
 }
 
+// Submit button and form
+
 submitBtn.addEventListener('click', function() {
-  passwordConfirmation()
+  passwordConfirmation();
   form.requestSubmit();
 })
 
