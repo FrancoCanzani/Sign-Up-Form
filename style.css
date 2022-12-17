@@ -54,7 +54,7 @@ table {
 
 @font-face {
     font-family: NasaFont;
-    src: url(/font/nasalization/nasalization-rg.otf);
+    src: url(../Sign-Up-Form/font/nasalization/nasalization-rg.otf)
 }
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
